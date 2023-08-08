@@ -14,7 +14,7 @@ function App() {
       const formData = new FormData();
       formData.append('video', selectedFile);
 
-      const response = await axios.post('http://localhost:5000/upload', formData, {
+      const response = await axios.post(process.env.UPLOAD, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       
